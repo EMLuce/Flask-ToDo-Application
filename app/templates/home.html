@@ -13,7 +13,8 @@
         name="note"
         id="note"
         placeholder="To-Do"
-        required />
+        required
+      />
     </div>
     <div class="form-group">
       <input
@@ -23,13 +24,15 @@
         name="due-date"
         value=""
         placeholder="Due Date"
-        onfocus="(this.type='date')" />
+        onfocus="(this.type='date')"
+      />
     </div>
     <input
       type="submit"
       name="action"
       value="Submit"
-      class="btn btn-primary btn-sm btn-block" />
+      class="btn btn-primary btn-sm btn-block"
+    />
   </form>
 </div>
 
@@ -65,7 +68,7 @@
       <p class="note" id="note-data">{{note.note}}</p>
       {% if note.due_date == '' %}
       <p class="date-overdue">No Due Date</p>
-      {% elif note.due_date > current_date %}
+      {% elif note.due_date >= current_date %}
       <p class="date-good">{{note.due_date}}</p>
       {% elif note.due_date < current_date %}
       <p class="date-overdue">Overdue: {{note.due_date}}</p>
@@ -88,7 +91,8 @@
         <button
           type="delete-button"
           class="close"
-          onClick="deleteNote({{ note.id }})">
+          onClick="deleteNote({{ note.id }})"
+        >
           <span aria-hidden="true"
             ><img
               class="delete-button-image"
