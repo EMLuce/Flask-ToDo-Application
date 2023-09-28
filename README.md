@@ -106,3 +106,16 @@ https://github.com/pallets/flask/issues/
 MIT License
 
 Copyright (c) 2023 Eric Luce
+
+## Images
+
+![Picture1](https://github.com/EMLuce/Flask-ToDo-Application/assets/111964005/be032321-7be0-4ee1-836f-f64dde7c2a4a)
+
+![Picture2](https://github.com/EMLuce/Flask-ToDo-Application/assets/111964005/2055478c-7c5a-4208-8680-8476e946d284)
+
+![Picture3](https://github.com/EMLuce/Flask-ToDo-Application/assets/111964005/65253b4b-591e-43bd-8aa4-740b455c41eb)
+
+![Picture4](https://github.com/EMLuce/Flask-ToDo-Application/assets/111964005/ca70c8f5-6116-40e5-93e1-19dbf70e011a)
+
+![Picture5](https://github.com/EMLuce/Flask-ToDo-Application/assets/111964005/56584ea6-32df-44a6-bf73-1525ab6cfdfc)
+
