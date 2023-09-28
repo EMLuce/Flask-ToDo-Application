@@ -1,0 +1,108 @@
+{% extends 'base.html' %} <title>{% block title %}Home{% endblock %}</title>
+
+{%block content %}
+
+<div class="note-create-container">
+  <h3>Create</h3>
+  <form method="POST">
+    <br />
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="note"
+        id="note"
+        placeholder="To-Do"
+        required />
+    </div>
+    <div class="form-group">
+      <input
+        class="custom-select"
+        type="text"
+        id="due-date"
+        name="due-date"
+        value=""
+        placeholder="Due Date"
+        onfocus="(this.type='date')" />
+    </div>
+    <input
+      type="submit"
+      name="action"
+      value="Submit"
+      class="btn btn-primary btn-sm btn-block" />
+  </form>
+</div>
+
+<br />
+
+<div class="working-note-display-container">
+  <h4>My List</h4>
+  <br />
+  <ul class="list-group" id="working_sortable">
+    {% for note in user.notes %} {% if note.completed == False %}
+    <li class="list-group-item" id="item_{{note}}">
+      <span aria-hidden="true">
+        <input type="checkbox" onClick="completeNote({{ note.id }})" />
+      </span>
+      <span>
+        <button type="delete-button" class="close">
+          <span aria-hidden="true"
+            ><img
+              class="delete-button-image"
+              src="{{ url_for('static', filename='images/garbagecan.png') }}"
+              onClick="deleteNote({{ note.id }})"
+          /></span>
+        </button>
+        <button type="edit-button" class="close">
+          <a href="/update/{{ note.id }}"
+            ><img
+              class="edit-button-image"
+              src="{{ url_for('static', filename='images/edit-button.png') }}"
+              alt=""
+          /></a>
+        </button>
+      </span>
+      <p class="note" id="note-data">{{note.note}}</p>
+      {% if note.due_date == '' %}
+      <p class="date-overdue">No Due Date</p>
+      {% elif note.due_date > current_date %}
+      <p class="date-good">{{note.due_date}}</p>
+      {% elif note.due_date < current_date %}
+      <p class="date-overdue">Overdue: {{note.due_date}}</p>
+      {% endif %}
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>
+
+<br />
+
+<div class="completed-note-display-container">
+  <ul class="list-group" id="completed_sortable">
+    {% for note in user.notes %} {% if note.completed == True %}
+    <li class="list-group-item">
+      <span aria-hidden="true">
+        <input type="checkbox" onClick="completeNote({{ note.id }})" checked />
+      </span>
+      <span>
+        <button
+          type="delete-button"
+          class="close"
+          onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true"
+            ><img
+              class="delete-button-image"
+              src="{{ url_for('static', filename='images/garbagecan.png') }}"
+          /></span>
+        </button>
+      </span>
+      <p class="note" id="note-data">{{note.note}}</p>
+      <p class="date-good">Completed: {{note.completed_date}}</p>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>
+
+<br />
+
+{% endblock %}

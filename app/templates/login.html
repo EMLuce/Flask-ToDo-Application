@@ -1,0 +1,58 @@
+{% extends 'base.html' %} <title>{% block title %}Login{% endblock %}</title>
+
+{%block content %}
+
+<div class="login-container">
+  <form method="post" enctype="multipart/form-data">
+    <br />
+    <h3>Sign In</h3>
+    <br />
+    <div class="form-group">
+      <label class="text" for="email">Username or email address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="login"
+        name="login"
+        placeholder=""
+        required
+      />
+    </div>
+    <br />
+    <div>
+      <label class="text" for="password">Password</label>
+      <a class="label-link" tabindex="0" href="#">Forgot password?</a>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder=""
+        required
+      />
+    </div>
+    <br />
+    <input
+      type="submit"
+      name="action"
+      value="Sign in"
+      class="btn btn-primary btn-sm btn-block"
+      data-disable-with="Signing in…"
+      data-signin-label="Sign in"
+      development="false"
+    />
+  </form>
+
+  <br />
+
+  <form class="no-account" method="post">
+    <div>
+      <p class="login-callout mt-3">
+        New User?
+        <a href="/signup">Create an account</a>
+      </p>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

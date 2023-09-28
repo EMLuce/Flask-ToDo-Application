@@ -1,0 +1,132 @@
+h3 {
+  text-align: center;
+}
+.profile-header-img {
+  width: 100px;
+  height: 75px;
+  margin: 0 0 -40px;
+  max-width: 100%;
+}
+.profile-header-img img {
+  max-width: 100%;
+}
+.body {
+  background: #161b22;
+  color: aliceblue;
+}
+.not-found {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 200px;
+  text-align: center;
+}
+
+/* Login Page CSS */
+.login-container form {
+  margin: 0 auto;
+  width: 300px;
+}
+.login-container p {
+  text-align: center;
+}
+.login-container .no-account {
+  border: 1px solid #fff;
+  border-radius: 12px;
+}
+/* Login Page End CSS */
+
+/* Signup Page CSS */
+.signup-container form {
+  margin: 0 auto;
+  width: 300px;
+}
+.signup-container p {
+  text-align: center;
+}
+.signup-container .no-account {
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+/* Signup Page End CSS */
+
+/* Home Page (Note Input) CSS */
+.note-create-container form {
+  margin: auto;
+  width: 220px;
+  text-align: center;
+}
+/* Home Page End (Note Input) CSS */
+
+/* Home Page (Note Display) CSS */
+.working-note-display-container ul {
+  color: black;
+  width: 50%;
+  margin: auto;
+}
+.working-note-display-container .date-good {
+  text-align: center;
+  font-size: x-small;
+  color: #161b22;
+  padding-top: 7px;
+  margin: 0;
+}
+.working-note-display-container .date-overdue {
+  text-align: center;
+  font-size: x-small;
+  color: #ff0000;
+  padding-top: 7px;
+  margin: 0;
+}
+.working-note-display-container .note {
+  text-align: center;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding-top: 10px;
+}
+.working-note-display-container h4 {
+  font-weight: bold;
+  text-align: center;
+}
+.working-note-display-container .delete-button-image {
+  width: 30px;
+  height: 30px;
+}
+.working-note-display-container .edit-button-image {
+  width: 20px;
+  height: 20px;
+}
+/* break */
+
+.completed-note-display-container ul {
+  color: black;
+  width: 50%;
+  margin: auto;
+}
+.completed-note-display-container .date-good {
+  text-align: center;
+  font-size: x-small;
+  color: #161b22;
+  padding-top: 7px;
+  margin: 0;
+  text-decoration: underline;
+}
+.completed-note-display-container .note {
+  text-align: center;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding-top: 10px;
+}
+.completed-note-display-container h4 {
+  font-weight: bold;
+  text-align: center;
+}
+.completed-note-display-container .delete-button-image {
+  width: 30px;
+  height: 30px;
+}
+.completed-note-display-container .edit-button-image {
+  width: 20px;
+  height: 20px;
+}
+/* Home Page End (Note Display) CSS */

@@ -1,0 +1,101 @@
+{% extends 'base.html' %} <title>{% block title %}Sign Up{% endblock %}</title>
+
+{%block content %}
+
+<div class="signup-container">
+  <form method="post" enctype="multipart/form-data">
+    <br />
+    <h3>Sign up</h3>
+    <br />
+    <div class="form-group">
+      <label class="text" for="email">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required />
+    </div>
+    <br />
+    <div class="'form-group">
+      <label class="text" for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+        required />
+    </div>
+    <br />
+    <div class="'form-group">
+      <label class="text" for="first_name">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="first_name"
+        name="first_name"
+        placeholder="Enter first name"
+        required />
+    </div>
+    <br />
+    <div class="'form-group">
+      <label class="text" for="last_name">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="last_name"
+        name="last_name"
+        placeholder="Enter last name"
+        required />
+    </div>
+    <br />
+    <div class="'form-group">
+      <label class="text" for="password1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password1"
+        name="password1"
+        placeholder="Enter password"
+        required />
+    </div>
+    <br />
+    <div class="'form-group">
+      <label class="text" for="password2">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password2"
+        name="password2"
+        placeholder="Confirm password"
+        onkeyup="isGood(this.value)"
+        required />
+      <small class="help-block" id="password-text"></small>
+    </div>
+
+    <br />
+    <input
+      type="submit"
+      name="action"
+      value="Sign up"
+      class="btn btn-primary btn-sm btn-block"
+      data-disable-with="Signing up…"
+      data-signin-label="Sign up"
+      development="false" />
+  </form>
+
+  <br />
+
+  <form class="no-account" method="post">
+    <div class="'form-group">
+      <p class="login-callout mt-3">
+        Already have an account?
+        <a href="/login">Sign in</a>
+      </p>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
